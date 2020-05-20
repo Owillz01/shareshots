@@ -1,0 +1,52 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<app-header></app-header>
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col">
+        <div class="display">
+      <form [formGroup]="screenshot">
+        <!-- <button>Signup with fb</button> -->
+
+          <div class="form-group ">
+            <!-- <div class="col-12"> -->
+              <label for="image">
+                <span class="material-icons">backup</span>
+                &nbsp;&nbsp;Select image  
+              </label>
+                <input type="file" accept="image/*" class="form-control-file" formControlName="image" #image id="image" (change)=selectedImage($event)>
+            <!-- </div> -->
+          </div>
+          <div class="form-group " *ngIf="isSelected">
+            <!-- <div class="col"> -->
+                 <p class="image_value">&nbsp;&nbsp; {{image.files[0].name}} </p>
+              <div class="col">
+              <input type="submit" class="btn btn-danger" value="upload"  (click)=submit()>
+              </div>
+            <!-- </div> -->
+               
+          </div>
+      </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- <div class="col-md-4"> -->
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Image title</h5>
+            <p class="card-text">escription</p>
+            <a href="#" class="btn btn-primary">Download</a> 
+            <span class="float-right">like</span>
+          </div>
+        </div>
+
+      <!-- </div> -->
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,13 @@
+.header{
+	margin: 10px auto;
+	justify-content: flex-end;
+	display: flex;
+}
+button{
+	background: #ffb300;
+	border: none;
+	color: white;
+	height: 44px;
+	border-radius: 3px;
+	font-weight: bold;
+}

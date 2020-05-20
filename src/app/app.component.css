@@ -1,0 +1,67 @@
+input[type="file"]{display: none;}
+.display{
+	display: flex;
+	margin: auto;
+	justify-content: center;
+}
+.container-fluid{
+	background: #002a3f;
+	padding:70px 0px;
+}
+.image_value{
+	height: 44px;
+	width: auto;
+	margin-right:auto;
+	margin-left: 0px;
+	display: flex;
+	align-content: center;
+	padding-top: 10px;
+	color: white;
+}
+.form-group{
+	margin-bottom: 0px;
+}
+.card{
+	margin-top: 20px;
+}
+label{
+	width: 215px;
+	padding: 10px;
+	border-radius: 3px;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+	background: #ffb300;
+	color: white;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	cursor: pointer;
+}
+label:hover{
+	box-shadow: 0 0 20px 10px #00000082;
+}
+button{
+	width: 215px;
+	padding: 10px;
+	border-radius: 3px;
+	height: 50px;
+	margin-right: 0px;
+	margin-left: auto;
+	background: #ffb300;
+	color: white;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	cursor: pointer;
+	border: none;
+}
+
+input[type="submit"]{
+	height: 44px;
+	width: auto;
+	margin-right: auto;
+}
