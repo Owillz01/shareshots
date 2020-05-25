@@ -13,7 +13,8 @@
                 <span class="material-icons">backup</span>
                 &nbsp;&nbsp;Select image  
               </label>
-                <input type="file" accept="image/*" class="form-control-file" formControlName="image" #image id="image" (change)=selectedImage($event)>
+                <input type="file" accept="image/*" class="form-control-file" formControlName="image" #image id="image" (change)=selectedImage($event) >
+                <button (click)="login()">login</button>
             <!-- </div> -->
           </div>
           <div class="form-group " *ngIf="isSelected">
@@ -39,9 +40,13 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Image title</h5>
-            <p class="card-text">escription</p>
-            <a href="#" class="btn btn-primary">Download</a> 
-            <span class="float-right">like</span>
+            <p class="card-text">description</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
           </div>
         </div>
 

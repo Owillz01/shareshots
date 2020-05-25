@@ -1,10 +1,11 @@
-<div class="container">
+<div class="container" *ngIf="token">
 	<div class="header">
 	
 			<div>
-				<img src="../../assets/images/user2.png" alt="user avater">
+				<img src="../../assets/images/user2.png" alt="user avater" *ngIf="!user_pic">
+				<img class="user_dp" src="{{user_pic}}" alt="user avater" *ngIf="user_pic">
 			</div>
-			<span>&nbsp;&nbsp;&nbsp;User &nbsp;&nbsp;&nbsp;</span>
-			<button>Log Out</button>
+			<span>&nbsp;&nbsp;&nbsp;Hello {{user_name}}! &nbsp;&nbsp;&nbsp;</span>
+			<button (click)="LogOut()">Log Out</button>
 	</div>
 </div>

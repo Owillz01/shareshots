@@ -11,3 +11,6 @@ button{
 	border-radius: 3px;
 	font-weight: bold;
 }
+.user_dp{
+	border-radius: 50%;
+}
