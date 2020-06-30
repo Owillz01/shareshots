@@ -1,0 +1,194 @@
+
+<app-header></app-header>
+<section class="bg--color">
+ <div class="container">
+   <div class="row">
+     <div class="col">
+         <div class="display">
+       <form [formGroup]="screenshot">
+         <!-- <button>Signup with fb</button> -->
+
+           <div class="form-group ">
+             <!-- <div class="col-12"> -->
+               <label *ngIf="user_name" for="image">
+                 <span class="material-icons">backup</span>
+                 &nbsp;&nbsp;Select image  
+               </label>
+                 <input type="file" accept="image/*" class="form-control-file" 
+                 formControlName="image" #image id="image" 
+                 (change)=selectedImage($event)  >
+
+                 <button (click)="login()" *ngIf="!user_name">login</button>
+             <!-- </div> -->
+           </div>
+           <div class="form-group " *ngIf="isSelected">
+             <!-- <div class="col"> -->
+                  <p class="image_value">&nbsp;&nbsp; {{image.files[0].name}} </p>
+               <div class="col">
+               <input type="submit" class="btn btn-danger" value="upload"  (click)=submit()>
+               </div>
+             <!-- </div> -->
+                
+           </div>
+       </form>
+         </div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section>
+  <div class="container-fluid">
+    <div class="row ">
+
+    <!-- <div class="row no--padding"> -->
+      <div class="col-md-3 col-xs-12 no--padding">
+        <div class="photo--container">
+          <img class="footage" src="https://images.pexels.com/photos/737586/pexels-photo-737586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"  alt="...">
+          <div class="footage__description--padding">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div>
+        </div>
+
+      <div class="col-md-3 col-xs-12 no--padding">
+        <div class="photo--container">
+          <img class="footage" src="https://images.pexels.com/photos/418831/pexels-photo-418831.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  alt="...">
+          <div class="footage__description--padding">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-xs-12 no--padding">
+
+      
+        <div class="photo--container">
+          <img class="footage" src="https://images.pexels.com/photos/1271620/pexels-photo-1271620.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  alt="...">
+          <div class="footage__description--padding">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-xs-12 no--padding">
+
+        <div class="photo--container">
+          <img class="footage" src="https://images.pexels.com/photos/349732/pexels-photo-349732.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  alt="...">
+          <div class="footage__description--padding">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-xs-12 no--padding">
+
+        <div class="photo--container">
+          <img class="footage" src="https://images.pexels.com/photos/722629/pexels-photo-722629.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  alt="...">
+          <div class="footage__description--padding">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- <div class="col-md-4"> -->
+        <!-- <div class="card" style="width: 18rem;">
+          <img src="https://images.pexels.com/photos/418831/pexels-photo-418831.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div>
+ -->
+      <!-- </div> -->
+      <!-- <div class="col-md-4"> -->
+        <!-- <div class="card" style="width: 18rem;">
+          <img src="https://images.pexels.com/photos/1271620/pexels-photo-1271620.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div> -->
+
+      <!-- </div> --><!-- <div class="col-md-4"> -->
+        <!-- <div class="card" style="width: 18rem;">
+          <img src="https://images.pexels.com/photos/349732/pexels-photo-349732.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div> -->
+
+      <!-- </div> --><!-- <div class="col-md-4"> -->
+        <!-- <div class="card" style="width: 18rem;">
+          <img src="https://images.pexels.com/photos/722629/pexels-photo-722629.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Photo of a Man Sitting Under the Tree</h5>
+            <p class="card-text">8.83 MB</p>
+            <span class="material-icons">
+              get_app
+            </span> 
+            <span class="float-right">
+               <span class="material-icons">thumb_up_alt</span>1
+            </span>
+          </div>
+        </div>
+ -->
+      <!-- </div> -->
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,44 @@
+ <!-- <div class="container" *ngIf="token">
+	<div class="header">
+	
+			<div>
+				<img src="../../assets/images/user2.png" alt="user avater" *ngIf="!user_pic">
+				<img class="user_dp" src="{{user_pic}}" alt="user avater" *ngIf="user_pic">
+			</div>
+			<span>&nbsp;&nbsp;&nbsp;Hello {{user_name}}! &nbsp;&nbsp;&nbsp;</span>
+			<button (click)="LogOut()">Log Out</button>
+	</div>
+</div> -->
+
+<div class="bg-light ">
+	<nav class="navbar header navbar-expand-lg navbar-light ">
+	  <a class="navbar-brand" href="#"> minn </a>
+	  <span class="navbar-toggler" (click)="isMenuCollapse = !isMenuCollapse" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </span>
+
+	  <div class="collapse ml-auto navbar-collapse" [ngbCollapse]="isMenuCollapse" id="navbarSupportedContent">
+	  	<form class="form-inline my-2 my-lg-0 ml-auto">
+	  	  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	  	  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search </button>
+	  	</form>&nbsp;&nbsp;&nbsp;
+	    <ul ngbNav class="navbar-nav">
+	      <li ngbNavItem class="nav-item">
+	      	<img src="../../assets/images/user2.png" alt="user avater" *ngIf="!user">
+	      	<img class="user_dp" src="{{user.photoURL}}" alt="user avater" *ngIf="user">
+	      </li>
+	      <li ngbDropdown class="nav-item dropdown">
+	        <span class="nav-link dropdown-toggle" ngbDropdownToggle id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Hello {{user.displayName}}!
+	        </span>
+	        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a ngbDropdownItem class="dropdown-item" routerLink="/dashboard">My Profile</a>
+	          <a ngbDropdownItem class="dropdown-item" (click)="LogOut()">Log out</a>
+	        </div>
+	      </li>
+	    </ul>
+	    
+	  </div>
+	</nav>
+
+</div>

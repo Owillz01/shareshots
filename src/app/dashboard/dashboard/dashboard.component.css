@@ -1,0 +1,48 @@
+section{
+	    height: 100vh;
+}
+
+
+
+.nav__btn{
+	/*background: white; */
+	padding: 20px 15px;
+	height: 100%;
+	margin-bottom: 0px;
+}
+.content--padding{
+	padding: 30px 30px;
+	    background: #f7f7f7;
+	    height: 60vh;
+
+}
+button{
+	background: none;
+    /* border: none; */
+    color: #9E9E9E;
+    margin: 10px 13px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    
+}
+
+button:active{
+	border-right: 2px solid #315263;
+	color: #315263;
+}
+
+@media screen and (min-width: 577px){
+	button{
+		width: 100%;
+	}
+}
+
+@media  screen and (max-width: 576px) {
+	button:active{
+	border-right: none;
+	border-bottom: 2px solid #315263;
+	color: #315263;
+}
+}

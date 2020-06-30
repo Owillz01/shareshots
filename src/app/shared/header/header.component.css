@@ -1,0 +1,20 @@
+.header{
+	margin: 0px 30px;
+}
+button{
+	background: none;
+	border: 1px solid #ffb300;
+	color: #ffb300;
+	/*height: 44px;*/
+	border-radius: 3px;
+	/*font-weight: bold;*/
+}
+button:hover{
+	background: #ffb300;
+	border: 1px solid #ffb300;
+}
+.user_dp{
+	border-radius: 50%;
+	max-width: 50px;
+}
+

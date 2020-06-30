@@ -1,0 +1,27 @@
+<section  [ngStyle]="{'background-image':'url('+imageUrl+')'}">
+	<div class="profile-details">
+		<header>
+		<div>
+			<p (click)="gotoHome()">Logo</p>
+		</div>
+	</header>
+		<div class="container">
+			<div class="row row__vertical--alignment">
+				<div class="col-xs-12 col-md-3 profile__details--img">
+					<!-- <img src="{{user.photoURL}}" alt=""> -->
+		      	<img class="user_dp" src="{{user.photoURL}}" alt="user avater">
+
+				</div>
+				<div class="col-xs-12 col-md-6 profile__details--text">
+					<p>{{user.displayName}}</p>
+					<p> {{user.email}} <span class="email__unverified" *ngIf="!user.emailVerified"> Unverified </span> <span class="email__verified" *ngIf="user.emailVerified"> Verified </span></p> 
+					<p> {{user.phoneNumber}} </p>		
+				</div>
+				<div>
+					<button class="btn__edit-details">Edit Profile</button>
+					<button class="btn__logout" (click)="logOut()">Logout</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

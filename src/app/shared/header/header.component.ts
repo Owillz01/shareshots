@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../services/auth.service'
+import { AuthService } from '../../services/auth.service'
 
 
 @Component({
@@ -8,9 +8,10 @@ import { AuthService } from '../services/auth.service'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-user_pic;
+user;
 user_name;
 token;
+public isMenuCollapse = true;
   constructor(private service : AuthService) { }
 
   LogOut(){
@@ -19,9 +20,10 @@ token;
   }
 
   ngOnInit() {
-  	this.user_pic = localStorage.getItem('img')
-  	this.user_name = localStorage.getItem('name')
-  	this.token = localStorage.getItem('token')
+  	this.user = JSON.parse(localStorage.getItem('user'))
+    console.log(this.user)
+  	// this.user_name = localStorage.getItem('name')
+  	// this.token = localStorage.getItem('token')
   }
 
 }

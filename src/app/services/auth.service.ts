@@ -11,17 +11,29 @@ import { User } from 'firebase';
 export class AuthService {
 user: User;
   constructor( public afAuth : AngularFireAuth) {
-
+  	// As httpOnly cookies are to be used, do not persist any state client side.
+	// auth().setPersistence(auth.Auth.Persistence.NONE);
    }
 
-// https://medium.com/@rubenvermeulen/running-angular-cli-over-https-with-a-trusted-certificate-4a0d5f92747a  
 
+// https://medium.com/@rubenvermeulen/running-angular-cli-over-https-with-a-trusted-certificate-4a0d5f92747a  
+// https://www.positronx.io/full-angular-7-firebase-authentication-system/
   FacebookLogin(){
-  	return this.afAuth.signInWithPopup(new auth.FacebookAuthProvider())
+  	// this.afAuth.setPersistence(auth.Auth.Persistence.NONE)
+  	// .then( () => {
+  		return this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider())
+  	// })
   	
   }
-  LogOut(){
-  	this.afAuth.signOut()
-  	localStorage.removeItem('token')
+
+    // "@angular/fire": "^5.4.2",
+  CheckAuthState(){
+    console.log(this.afAuth.auth.currentUser)
+    return this.afAuth.auth.currentUser
+    // this.afAuth.auth.onAuthStateChanged(user => console.log('User>>>',user))
+  }
+  LogOut(){ 
+  	this.afAuth.auth.signOut()
+  	localStorage.removeItem('user')
   }
 }
